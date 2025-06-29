@@ -208,16 +208,30 @@ st.markdown("""
 
 # Overall Conclusion (Customizable)
 st.header("Overall Conclusion")
-This project uses a 100-sample subset from the well-known CNN/DailyMail dataset to compare human-written and T5-generated summaries in detail. We assess both summarization styles using a variety of quantitative and qualitative metrics.
+st.markdown("""
+<div style="background:#fafcff; border-radius:12px; padding:24px 28px; margin-top:10px; color:#111;">
+    <h3 style="margin-top:0; color:#214478;">Project Summary</h3>
+    <p>
+        This project uses a <b>100-sample subset</b> from the well-known CNN/DailyMail dataset to compare <b>human-written and T5-generated summaries</b> in detail. We assess both summarization styles using a variety of quantitative and qualitative metrics.
+    </p>
+    <ul style="line-height:1.7;">
+        <li>
+            <b>Structure & Length:</b> The findings demonstrate a striking similarity in the fundamental structure and length of summaries produced by AI and humans. Both distributions peak in the <b>40–60 word range</b>, and the average word count for T5 summaries (50.8) closely resembles that of human-written summaries (52.0), demonstrating that T5 effectively emulates human summarization patterns. The model's innate propensity for uniformity and brevity is demonstrated by the fact that T5 outputs stay more closely clustered while human summaries can occasionally reach much longer lengths.
+        </li>
+        <li>
+            <b>Sentence & Character Count:</b> A similar pattern emerges for sentence and character counts. T5 summaries are generally shorter (<b>2.9 sentences, 274.9 characters</b>) compared to their human counterparts (<b>3.8 sentences, 286.1 characters</b>). This reflects T5’s bias for concise outputs and greater consistency. Human summaries, by contrast, demonstrate more variation, sometimes offering shorter or much longer responses—potentially providing additional nuance or context.
+        </li>
+        <li>
+            <b>Punctuation & Expressiveness:</b> Punctuation analysis further demonstrates that T5 closely mirrors human behavior, with both averaging around five punctuation marks per summary. However, human authors occasionally use much more punctuation, hinting at more complex or expressive sentence structures.
+        </li>
+        <li>
+            <b>Evaluation Metrics:</b> T5-generated summaries achieve a <b>ROUGE-1 score of 0.394</b>, <b>ROUGE-L of 0.281</b>, and <b>cosine similarity of 0.71</b>, indicating a strong semantic and lexical resemblance to human summaries. Readability scores show both are accessible, though T5 summaries may be slightly simpler on average.
+        </li>
+    </ul>
+    <p>
+        <b>Conclusion:</b> Overall, T5 proves highly capable at replicating the structure, length, and general readability of human-written summaries. While it tends to be more consistent and concise, some richness and variability unique to human writing may be diminished. These findings underscore the impressive progress of modern text summarization models, while also highlighting the subtle distinctions that still separate AI outputs from human creativity and flexibility.
+    </p>
+</div>
+""", unsafe_allow_html=True)
 
-The findings demonstrate a striking similarity in the fundamental structure and length of summaries produced by AI and humans. Both distributions peak in the 40 to 60 word range, and the average word count for T5 summaries (50.8) closely resembles that of human-written summaries (52.0), demonstrating that T5 effectively emulates human summarization patterns. The model's innate propensity for uniformity and brevity is demonstrated by the fact that T5 outputs stay more closely clustered while human summaries can occasionally reach much longer lengths.
-         
-A similar pattern emerges for sentence and character counts. T5 summaries are generally shorter (about 2.9 sentences, 274.9 characters) compared to their human counterparts (3.8 sentences, 286.1 characters). This reflects T5’s bias for concise outputs and greater consistency. Human summaries, by contrast, demonstrate more variation, sometimes offering shorter or much longer responses—potentially providing additional nuance or context.
-
-Punctuation analysis further demonstrates that T5 closely mirrors human behavior, with both averaging around five punctuation marks per summary. However, human authors occasionally use much more punctuation, hinting at more complex or expressive sentence structures.
-
-When considering evaluation metrics, T5-generated summaries achieve a ROUGE-1 score of 0.394, ROUGE-L of 0.281, and cosine similarity of 0.71, indicating a strong semantic and lexical resemblance to human summaries. Readability scores show both are accessible, though T5 summaries may be slightly simpler on average.
-
-Overall, T5 proves highly capable at replicating the structure, length, and general readability of human-written summaries. While it tends to be more consistent and concise, some richness and variability unique to human writing may be diminished. These findings underscore the impressive progress of modern text summarization models, while also highlighting the subtle distinctions that still separate AI outputs from human creativity and flexibility.
-""")
 
