@@ -27,7 +27,7 @@ def load_data(path):
     return pd.read_csv(path)
 
 
-df = load_data(r'C:\Users\patel\OneDrive\Desktop\Percepcia\Code Files\sampled_100_with_t5_summary.csv')
+df = load_data('data/sampled_100_with_t5_summary.csv')
 model = SentenceTransformer('all-MiniLM-L6-v2')
 
 # Compute features (cached)
